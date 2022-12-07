@@ -1,0 +1,35 @@
+<main>
+
+    <form #taskCreationForm>
+        <h3>Create a Task</h3>
+
+
+    <!-- <div>
+        <label for="task-name">Task:</label>
+        <input [(ngModel)] = "task-name" input id="task-name" name="task-name" type="text" placeholder="placeholder sign">
+    </div> -->
+
+    <!-- <div>
+        <label for="symbol">Symbol:</label>
+        <input [(ngModel)] = "symbol" input id="symbol" name="symbol" type="text" placeholder="placeholder symbol">
+    </div>
+
+    <div>
+        <label for="element">element:</label>
+        <input [(ngModel)] = "element" input id="element" name="element" type="text" placeholder="placeholder element">
+    </div> -->
+
+    <p>Task Name: {{taskList}}</p>
+    <!-- <p>Symbol: {{date}}</p>
+    <p>Element: {{task-body}}</p> -->
+    <!-- <button (click)="addSign(); taskCreationForm.reset()">Add my Task</button> -->
+
+    <button (click)="addTaskUsingModel(); taskCreationForm.reset()">Add my Task using Model</button>
+</form>
+
+    <!-- <ng-container *ngFor="let task of taskList">
+
+        <app-card [card]="card"></app-card>
+
+    </ng-container> -->
+</main>
