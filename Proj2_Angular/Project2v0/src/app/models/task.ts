@@ -2,11 +2,14 @@
 
 export class Task {
 
-        taskName: string;
+        title: string;
+        content: string; // description of the task
+        priority: number; // 0-2, 0 being the highest
 
-        constructor(taskName:string){
-            this.taskName=taskName;
-
+        constructor(title:string, content: string, priority: number){
+            this.title = title;
+            this.content = content;
+            this.priority = priority;
         }
 
 }

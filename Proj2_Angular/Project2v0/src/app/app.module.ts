@@ -11,6 +11,7 @@ import { TaskViewComponent } from './task-view/task-view.component';
 import { ModifyTasksComponent } from './modify-tasks/modify-tasks.component';
 import { CompletedTasksComponent } from './completed-tasks/completed-tasks.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     TaskViewComponent,
     ModifyTasksComponent,
     CompletedTasksComponent,
-    CalendarComponent
+    CalendarComponent,
+    CreateTaskComponent,
   ],
 
    ///add forms module here 

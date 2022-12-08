@@ -1,0 +1,54 @@
+<main>
+    <form #addTask>
+
+        <h2>Add New Task</h2>
+
+        <div>
+            <label for="taskTitle">Task Title</label><br>
+            <input [(ngModel)]="newTask.title"
+                   type="text"
+                   id="taskTitle"
+                   name="taskTitle"
+                   placeholder="Enter Task Title..."
+                   >
+        </div>
+        <div id="taskContent">
+            <label for="taskContent">Content</label> <br>
+            <textarea [(ngModel)]="newTask.content" name="taskContent" id="taskContent" cols="30" rows="10"></textarea>
+        </div>
+        <div class="priorityDiv">
+            <label>Priority</label><br>
+            <input [(ngModel)]="newTask.priority"
+                   type="radio"
+                   id="high"
+                   name="taskPriority"
+                   value="0"                
+                   >
+            <label for="high">High</label>
+
+            <input [(ngModel)]="newTask.priority"
+                   type="radio"
+                   id="medium"
+                   name="taskPriority"    
+                   value="1"            
+                   >
+            <label for="medium">Medium</label>
+
+            <input [(ngModel)]="newTask.priority"
+                   type="radio"
+                   id="low"
+                   name="taskPriority"      
+                   value="2"          
+                   >
+            <label for="low">Low</label>
+        </div>
+
+        <div id="actions">
+            <button (click)="returnToTaskView()">Cancel</button>
+            <button (click)="addTask.reset()">Clear</button>
+            <button (click)="createNewTask(); returnToTaskView()">Submit</button>
+        </div>
+        
+
+    </form>
+</main>
