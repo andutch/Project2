@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Task } from '../models/task';
 import { Router } from '@angular/router';
+import { TaskDataXferService } from '../services/task-data-xfer.service';
 
 @Component({
   selector: 'app-create-task',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CreateTaskComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private taskDataXfer: TaskDataXferService){}
 
   @Output() newTaskEvent = new EventEmitter<any>();
 
@@ -18,9 +19,8 @@ export class CreateTaskComponent {
   
 
   createNewTask():void {
-    this.newTaskEvent.emit(this.newTask);
-
-    console.log(this.newTask);
+    this.taskDataXfer.taskList.push(this.newTask);
+    console.log(this.taskDataXfer.taskList)
   }
 
   returnToTaskView(): void {

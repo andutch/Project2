@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskDataXferService } from '../services/task-data-xfer.service';
 
 @Component({
   selector: 'app-task-view',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-view.component.css']
 })
 export class TaskViewComponent {
+
+  constructor(public taskDataXfer: TaskDataXferService){};
+
+  taskList = this.taskDataXfer.taskList;
 
 }
