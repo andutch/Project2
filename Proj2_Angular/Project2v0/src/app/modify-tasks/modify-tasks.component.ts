@@ -11,6 +11,7 @@ export class ModifyTasksComponent {
   title: string='';
   content: string = '';
   priority: number = 0; 
+  dateCreated: string = '';
 
   taskList: any=[
   {
@@ -22,7 +23,7 @@ export class ModifyTasksComponent {
 ];
 
   addTaskUsingModel(): void{
-    let newTask: Task = new Task(this.title, this.content, this.priority )
+    let newTask: Task = new Task(this.title, this.content, this.priority, this.dateCreated )
 
     this.taskList.push(newTask);
   }

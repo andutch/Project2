@@ -1,5 +1,5 @@
-<!-- <main class="task-grid">
-    <article class="task bg-secondary-4 text-neutral-1">
+<main class="task-grid">
+    <!-- <article class="task bg-secondary-4 text-neutral-1">
       <div class="flex">
         <div>
           <img  src="../../assets/images/fire.png" alt="Fire">
@@ -72,49 +72,30 @@
         an incredible community of smart and amazing people. ”
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic 
       </p>
-    </article>
-    <article class="task bg-neutral-1 text-secondary-6">
-      <div class="flex">
-        <div>
-          <img src="../../assets/images/cold.png"  alt="Cold">
-        </div>
-        <div>
-          <h2 class="name">Due: 04-Dec-22</h2>
-          <p class="position"><progress value="80" max="100"></progress></p>
-        </div>
-      </div>
-      <p>
-        Shopping list for groceries and other stuff.
-      </p>
-      <p>
-        “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! ”
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! dicta odio nemo. Ducimus, voluptates sed! </p>
-        
-       
     </article> -->
-
-  <!-- </main> -->
-
-  <ng-container *ngFor="let task of taskList">
-    <article class="task bg-neutral-1 text-secondary-6">
-      <div class="flex">
-        <div>
-          <img src="../../assets/images/cold.png"  alt="Cold">
+    <ng-container *ngFor="let task of taskList">
+      <article class="task bg-neutral-1 text-secondary-6">
+        <div class="flex">
+          <div>
+            <img src="../../assets/images/cold.png"  alt="Cold">
+          </div>
+          <div>
+            <h2 class="name">{{ task.timestamp }}</h2>
+            <p class="position"><progress value="80" max="100"></progress></p>
+          </div>
         </div>
-        <div>
-          <h2 class="name">Due: 04-Dec-22</h2>
-          <p class="position"><progress value="80" max="100"></progress></p>
-        </div>
-      </div>
-      <p>
-        {{ task.title }}
-      </p>
-      <p>
-        {{ task.content }} </p>
-        
-       
-    </article>
-  </ng-container>
+        <p>
+          {{ task.title }}
+        </p>
+        <p>
+          {{ task.content }} </p>
+          
+         
+      </article>
+    </ng-container>
+
+  </main>
+
+  
 
 

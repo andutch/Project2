@@ -14,7 +14,14 @@ export class CreateTaskComponent {
 
   @Output() newTaskEvent = new EventEmitter<any>();
 
-  newTask: Task = new Task ('', '', 0);
+  currentDate = new Date();
+  timestamp = "Last Sync: " + this.currentDate.getDate() + "/"
+  + (this.currentDate.getMonth()+1)  + "/" 
+  + this.currentDate.getFullYear() + " @ "  
+  + this.currentDate.getHours() + ":"  
+  + this.currentDate.getMinutes();
+
+  newTask: Task = new Task ('', '', 0, this.timestamp);
 
   
 
