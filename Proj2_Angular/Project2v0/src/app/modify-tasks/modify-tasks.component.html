@@ -1,35 +1,62 @@
 <main>
+    <form #addTask>
 
-    <form #taskCreationForm>
-        <h3>Create a Task</h3>
+        <h2>Edit Task</h2>
 
+        <div>
+            <label for="taskTitle">{{ taskDataXfer.taskToBeEdited.title }}</label> <br>
+            <input [(ngModel)]="newTask.title"
+                   type="text"
+                   id="taskTitle"
+                   name="taskTitle"
+                   placeholder="Leave Blank For No Title Edits..."
+                   >
+        </div>
+        <div id="taskContent">
+            <label for="taskContent">Content</label> <br>
+            <textarea [(ngModel)]="newTask.content" 
+                      name="taskContent" 
+                      id="taskContent" 
+                      cols="30" rows="10">
+            </textarea>
+        </div>
+        <div class="priorityDiv">
+            <label>Priority</label><br>
+            <input [(ngModel)]="newTask.priority"
+                   type="radio"
+                   id="high"
+                   name="taskPriority"
+                   value="0"                
+                   >
+            <label for="high">High</label>
 
-    <div>
-        <label for="title">Task:</label>
-        <input [(ngModel)] = "title" input id="title" name="title" type="text" placeholder="Update Title...">
-    </div>
+            <input [(ngModel)]="newTask.priority"
+                   type="radio"
+                   id="medium"
+                   name="taskPriority"    
+                   value="1"            
+                   >
+            <label for="medium">Medium</label>
 
-    <!-- <div>
-        <label for="symbol">Symbol:</label>
-        <input [(ngModel)] = "symbol" input id="symbol" name="symbol" type="text" placeholder="placeholder symbol">
-    </div>
+            <input [(ngModel)]="newTask.priority"
+                   type="radio"
+                   id="low"
+                   name="taskPriority"      
+                   value="2"          
+                   >
+            <label for="low">Low</label>
+        </div>
 
-    <div>
-        <label for="element">element:</label>
-        <input [(ngModel)] = "element" input id="element" name="element" type="text" placeholder="placeholder element">
-    </div> -->
+        <div id="actions">
+            <button (click)="returnToTaskView()">Cancel</button>
+            <button (click)="addTask.reset()">Clear</button>
+            <button (click)="modifyTask(); returnToTaskView()">Submit</button>
+        </div>
+        
 
-    <p>Task Name: {{title}}</p>
-    <!-- <p>Symbol: {{date}}</p>
-    <p>Element: {{task-body}}</p> -->
-    <!-- <button (click)="addSign(); taskCreationForm.reset()">Add my Task</button> -->
+    </form>
 
-    <button (click)="addTaskUsingModel(); taskCreationForm.reset()">Add my Task using Model</button>
-</form>
-
-    <!-- <ng-container *ngFor="let task of taskList">
-
-        <app-card [card]="card"></app-card>
-
-    </ng-container> -->
+    <section>
+        <button (click)="taskDataXfer.search()"> test </button>
+    </section>
 </main>

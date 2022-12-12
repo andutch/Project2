@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TaskDataXferService } from '../services/task-data-xfer.service';
 
 @Component({
@@ -8,8 +9,15 @@ import { TaskDataXferService } from '../services/task-data-xfer.service';
 })
 export class TaskViewComponent {
 
-  constructor(public taskDataXfer: TaskDataXferService){};
+  constructor(public taskDataXfer: TaskDataXferService, private router: Router){};
 
   taskList = this.taskDataXfer.taskList;
+
+  modifyTask(taskId: string): void {
+    console.log("passed variable: " + taskId);
+    this.taskDataXfer.searchId = taskId;
+    this.taskDataXfer.search();
+    this.router.navigateByUrl('/modify-tasks');
+  }
 
 }

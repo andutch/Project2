@@ -81,7 +81,7 @@
           </div>
           <div>
             <h2 class="name">{{ task.timestamp }}</h2>
-            <p class="position"><progress value="80" max="100"></progress></p>
+            <button (click)='modifyTask(task.taskId)'>Edit</button>
           </div>
         </div>
         <p>
