@@ -2,11 +2,24 @@
 
 export class Task {
 
-        taskName: string;
+        title: string;
+        content: string; // description of the task
+        priority: number; // 0-2, 0 being the highest //mod
+        timestamp: any;
+        currentDate = new Date();
+        taskId = (this.currentDate.getMonth()+1)
+        + this.currentDate.getDate() + ":" 
+        + this.currentDate.getFullYear() + ":"  
+        + this.currentDate.getHours() + ":"  
+        + this.currentDate.getMinutes() + ":"
+        + this.currentDate.getSeconds();
 
-        constructor(taskName:string){
-            this.taskName=taskName;
-
+        constructor(title:string, content: string, priority: number, timestamp: any) {
+            this.title = title;
+            this.content = content;
+            this.priority = priority;
+            this.timestamp = timestamp;
+            this.taskId;
         }
 
 }

@@ -30,11 +30,6 @@ input {
     margin: 6px 0px;
     border: solid 2px rgba(0, 0, 0, 0.658);
 }
-
-#taskTitle {
-    width: 350px;
-}
-
 input:focus {
     transform: scale(1.25);
 }
@@ -45,15 +40,8 @@ textarea {
     width: 500px;
     margin-top: 5px;
     box-shadow: 6px 6px 6px rgba(114, 0, 114, 0.795);
-    color: black;
 }
 
 #actions button {
     margin: 10px;
-}
-
-section {
-    display: inline-block;
-    background-color: gray;
-    color: black;
 }

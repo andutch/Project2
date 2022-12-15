@@ -1,25 +1,22 @@
 <main>
     <form #addTask>
 
-        <h2>Edit Task</h2>
+        <h2>Add New Task</h2>
 
         <div>
-            <label for="taskTitle">{{ taskDataXfer.taskToBeEdited.title }}</label> <br>
+            <label for="taskTitle">Task Title</label><br>
             <input [(ngModel)]="newTask.title"
                    type="text"
                    id="taskTitle"
                    name="taskTitle"
-                   placeholder="Leave Blank For No Title Edits..."
+                   placeholder="Enter Task Title..."
                    >
         </div>
         <div id="taskContent">
             <label for="taskContent">Content</label> <br>
-            <textarea [(ngModel)]="newTask.content" 
-                      name="taskContent" 
-                      id="taskContent" 
-                      cols="30" rows="10">
-            </textarea>
+            <textarea [(ngModel)]="newTask.content" name="taskContent" id="taskContent" cols="30" rows="10"></textarea>
         </div>
+        <!-- edits old 0 1 2 -->
         <div class="priorityDiv">
             <label>Priority</label><br>
             <input [(ngModel)]="newTask.priority"
@@ -27,6 +24,7 @@
                    id="high"
                    name="taskPriority"
                    value="0"                
+                                
                    >
             <label for="high">High</label>
 
@@ -50,13 +48,9 @@
         <div id="actions">
             <button (click)="returnToTaskView()">Cancel</button>
             <button (click)="addTask.reset()">Clear</button>
-            <button (click)="modifyTask(); returnToTaskView()">Submit</button>
+            <button (click)="createNewTask(); returnToTaskView()">Submit</button>
         </div>
         
 
     </form>
-
-    <section>
-        <button (click)="taskDataXfer.search()"> test </button>
-    </section>
 </main>

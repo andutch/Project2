@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CompletedTasksComponent } from './completed-tasks/completed-tasks.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { Task } from './models/task';
 import { ModifyTasksComponent } from './modify-tasks/modify-tasks.component';
 import { TaskViewComponent } from './task-view/task-view.component';
 
@@ -26,6 +28,10 @@ const routes: Routes = [
   {
     path: 'completed-tasks',
     component:CompletedTasksComponent 
+  },
+  {
+    path: 'create-task',
+    component: CreateTaskComponent
   }
 
 ];
