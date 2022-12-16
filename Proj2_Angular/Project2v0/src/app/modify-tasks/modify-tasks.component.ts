@@ -19,12 +19,17 @@ export class ModifyTasksComponent {
   + this.currentDate.getHours() + ":"  
   + this.currentDate.getMinutes();
 
-  newTask: Task = new Task ('', '', 0, this.timestamp);//mod
+
+  modifiedTask: Task = new Task ('', '', 0, this.timestamp);
   
 
   modifyTask():void {
-    this.taskDataXfer.taskList.push(this.newTask);
-    console.log(this.taskDataXfer.taskList)
+    console.log("inside modifiedTas.component: ");
+    console.log(this.modifiedTask);
+    console.log("inside modifiedTas.component (service variable):");
+    console.log(this.taskDataXfer.taskToBeEdited);
+    this.taskDataXfer.modifyTask(this.modifiedTask);
+
   }
 
   returnToTaskView(): void {

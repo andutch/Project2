@@ -1,15 +1,20 @@
+
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 import { Task } from '../models/task';
 import { Router } from '@angular/router';
 import { TaskDataXferService } from '../services/task-data-xfer.service';
 
+
 import { TASKS } from '../models/example-tasks';
+
 
 @Component({
   selector: 'app-create-task',
   templateUrl: './create-task.component.html',
   styleUrls: ['./create-task.component.css']
 })
+
 
 
 
@@ -38,7 +43,9 @@ export class CreateTaskComponent implements OnInit{
   + this.currentDate.getHours() + ":"  
   + this.currentDate.getMinutes();
 
-  newTask: Task = new Task ('', '', 0, this.timestamp);//mod
+
+  newTask: Task = new Task ('', '', 0, this.timestamp);
+
 
   
 
@@ -81,3 +88,4 @@ export class CreateTaskComponent implements OnInit{
 //   }
 
 // }
+

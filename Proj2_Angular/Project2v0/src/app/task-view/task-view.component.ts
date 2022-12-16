@@ -14,10 +14,6 @@ export class TaskViewComponent {
   taskList = this.taskDataXfer.taskList;
 
 
-  // getPriority:string(){
-  //   return this.task.priority;
-  // }
-
   modifyTask(taskId: string): void {
     console.log("passed variable: " + taskId);
     this.taskDataXfer.searchId = taskId;
