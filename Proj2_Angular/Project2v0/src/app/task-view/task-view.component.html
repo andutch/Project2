@@ -1,5 +1,11 @@
-<main class="task-grid">
-    <!-- <article class="task bg-secondary-4 text-neutral-1">
+
+
+
+
+
+
+    <article class="task box-type-0">
+
       <div class="flex">
         <div>
           <img  src="../../assets/images/fire.png" alt="Fire">
@@ -14,12 +20,13 @@
       </p>
       <p>
         “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! 
+       
         
       </p>
     </article>
-    <article class="task bg-primary-4 text-neutral-1">
+
+    <article class="task box-type-1">
       <div class="flex">
         <div>
           <img src="../../assets/images/fire.png" alt="Fire">
@@ -36,7 +43,8 @@
         “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”
       </p>
     </article>
-    <article class="task bg-neutral-1 text-secondary-6">
+
+    <article class="task box-type-2">
       <div class="flex">
         <div>
           <img src="../../assets/images/fire.png" alt="Fire">
@@ -52,7 +60,8 @@
         “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic   ”
       </p>
     </article>
-    <article class="task bg-secondary-5 text-neutral-1">
+    
+    <article class="task box-type-3">
       <div class="flex">
         <div>
           <img src="../../assets/images/cold.png" alt="Cold">
@@ -70,14 +79,50 @@
         gave me the confidence necessary to be able to go out in the world and present myself as a capable
         junior developer. The standard is above the rest. You will get the personal attention you need from
         an incredible community of smart and amazing people. ”
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic 
+        
       </p>
-    </article> -->
-    <ng-container *ngFor="let task of taskList">
-      <article class="task bg-neutral-1 text-secondary-6">
+
+    </article> 
+
+    <article class="task box-type-4">
+      <div class="flex">
+        <div>
+          <img src="../../assets/images/cold.png"  alt="Cold">
+        </div>
+        <div>
+          <h2 class="name">Due: 04-Dec-22</h2>
+          <p class="position"><progress value="80" max="100"></progress></p>
+        </div>
+      </div>
+      <p>
+        Shopping list for groceries and other stuff.
+      </p>
+      <p>
+        “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! ”
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed! 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus!  </p>
+        
+       
+    </article>
+
+
+
+
+    <ng-container *ngFor="let task of taskList; index as i">
+      <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+6}}; grid-area: var(--grid-var);">
+      <!-- <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:{{i}}; grid-area: --grid-var"> -->
+      <!-- <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:toWord(i+5); grid-area: var(--grid-var)"> -->
         <div class="flex">
           <div>
-            <img src="../../assets/images/cold.png"  alt="Cold">
+            <ng-container [ngSwitch]='task.priority' >
+                
+              <img *ngSwitchCase = "'0'" src="../../assets/images/fire.png">
+              <img *ngSwitchCase = "'2'" src="../../assets/images/cold.png">
+              <!-- <img *ngSwitchDefault>Need a default img -{{task.priority}} -->
+              <!-- <img src='{{task.priority}}'  alt="priority"> -->
+          </ng-container>
+
+
           </div>
           <div>
             <h2 class="name">{{ task.timestamp }}</h2>
@@ -97,5 +142,4 @@
   </main>
 
   
-
 

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+
 import { Task } from '../models/task';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +19,15 @@ export class TaskDataXferService {
   searchId: string = '';
 
   taskToBeEdited: any;
+
   taskToBeEditedIndex: any;
+
 
   search(): void {
     for (let i = 0; i < this.taskList.length; i++) {
       if (this.taskList[i].taskId === this.searchId) {
       this.taskToBeEdited = this.taskList[i];
+
       this.taskToBeEditedIndex = i;
       }
     }
@@ -47,4 +52,5 @@ export class TaskDataXferService {
     // console.log();
     // console.log(this.taskList);
   }
+
 }

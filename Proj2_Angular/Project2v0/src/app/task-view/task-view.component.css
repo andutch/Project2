@@ -26,8 +26,8 @@
     --fs-3: 0.6875rem;
     --fs-4: 0.8125rem;
     --fs-5: 1.25rem;
-
- 
+      
+    --grid-var:0
   }
   
 
@@ -43,7 +43,7 @@
     gap: var(--gap, 1rem);
   }
   
-  
+/*   
   .bg-primary-4 {
     background: hsl(var(--clr-primary-4));
     
@@ -72,24 +72,28 @@
 
   .border-primary-400 {
     border: 2px solid #a775f1;
-  }
+  } */
   
   /* components */
   .task-grid {
     display: grid;
-    gap: 1.5rem;
+    /*  */
+    /* gap: 1.5rem; */
+    
     grid-auto-columns: 1fr;
-    grid-template-areas:
+    /* grid-template-areas:
      'one'
      'two'
      'three'
      'four'
      'five'
-     /*  */
+   
      'six'
      'seven'
-     'eight';
-  
+     'eight'
+     'nine'
+     'ten'; */
+  /*  */
     padding-block: 2rem;
     width: min(95%, 70rem);
     margin-inline: auto;
@@ -108,27 +112,112 @@
 
   
   .task:nth-child(1) {
+    margin: .5rem;
     grid-area: one;
+    
   }
  
 
   .task:nth-child(2) {
+    margin: .5rem;
+   
     grid-area: two;
   }
   .task:nth-child(3) {
+    margin: .5rem;
     grid-area: three;
   }
   .task:nth-child(4) {
+    margin: .5rem;
     grid-area: four;
   }
   .task:nth-child(5) {
+    margin: .5rem;
     grid-area: five;
   }
   
+
+
+/* 
   .task:nth-child(6) {
+   
+    grid-area: a-6;
+  }
+ 
+
+  
+  .task:nth-child(7) {
+    grid-area: a-7;
+  }
+
+  .task:nth-child(8) {
+    grid-area: a-8;
+  }
+
+  .task:nth-child(9) {
+    grid-area: a-9;
+  }
+  .task:nth-child(10) {
+    grid-area: a-10;
+  } */
+
+
+
+  
+  /* .task:nth-child(6) {
+   
     grid-area: six;
   }
+ 
+
   
+  .task:nth-child(7) {
+    grid-area: seven;
+  }
+
+  .task:nth-child(8) {
+    grid-area: eight;
+  }
+
+  .task:nth-child(9) {
+    grid-area: nine;
+  }
+  .task:nth-child(10) {
+    grid-area: ten;
+  }  */
+
+/********************************************************/
+
+.box-type-0{
+  color: hsl(var(--clr-neutral-1));
+  background: hsla(var(--clr-secondary-4));
+}
+
+
+.box-type-1{
+  color: hsl(var(--clr-neutral-1));
+  background: hsl(var(--clr-primary-4));
+}
+
+.box-type-2{
+  color: hsl(var(--clr-secondary-6));
+  background: hsl(var(--clr-neutral-1));
+}
+
+.box-type-3{
+  color: hsl(var(--clr-neutral-1));
+  background: hsl(var(--clr-secondary-5));
+}
+
+.box-type-4{
+  color: hsl(var(--clr-secondary-6));
+  background: hsl(var(--clr-neutral-1));
+}
+/* 
+.box-type-4{
+  color: hsl(var(--clr-neutral-1));
+  background: hsl(var(--clr-secondary-5));
+} */
 
   /* @media screen and (min-width: 33em) {
     .task-grid {
@@ -140,7 +229,7 @@
     }
   } */
   
-  @media screen and (min-width: 38em) {
+  /* @media screen and (min-width: 38em) {
     .task-grid {
       grid-template-areas:
        'one one'
@@ -159,13 +248,30 @@
         "three four four";
         
     }
-  }
+  } */
   
   @media screen and (min-width: 75em) {
     .task-grid {
         grid-template-areas:
         "one one two five"
-        "three four four five";
+        "three four four five"
+        /* "six seven eight nine"
+        "six seven eight nine" */
+        /* "ten eleven twelve thirteen" */
+        "a6 a7 a8 a8"
+        "a6 a9 a9 a10"
+        
+        "a11 a11 a12 a15"
+        "a13 a14 a14 a15"
+
+        "a16 a17 a18 a18"
+        "a16 a19 a19 a20"
+        
+        "a21 a21 a22 a25"
+        "a23 a24 a24 a25"; 
+
+        /* "six-0 seven-1 eight-2 eight-2"
+        "six-0 nine-3 nine-3 ten-4"; */
        
     }
   }

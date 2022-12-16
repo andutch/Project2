@@ -19,6 +19,7 @@ export class ModifyTasksComponent {
   + this.currentDate.getHours() + ":"  
   + this.currentDate.getMinutes();
 
+
   modifiedTask: Task = new Task ('', '', 0, this.timestamp);
   
 
@@ -28,6 +29,7 @@ export class ModifyTasksComponent {
     console.log("inside modifiedTas.component (service variable):");
     console.log(this.taskDataXfer.taskToBeEdited);
     this.taskDataXfer.modifyTask(this.modifiedTask);
+
   }
 
   returnToTaskView(): void {

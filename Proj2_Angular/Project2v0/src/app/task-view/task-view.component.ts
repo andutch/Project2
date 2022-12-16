@@ -13,6 +13,7 @@ export class TaskViewComponent {
 
   taskList = this.taskDataXfer.taskList;
 
+
   modifyTask(taskId: string): void {
     console.log("passed variable: " + taskId);
     this.taskDataXfer.searchId = taskId;

@@ -1,11 +1,15 @@
 <main>
+
     <form #modifyTaskForm>
+
 
         <h2>Edit Task</h2>
 
         <div>
             <label for="taskTitle">{{ taskDataXfer.taskToBeEdited.title }}</label> <br>
+
             <input [(ngModel)]="modifiedTask.title"
+
                    type="text"
                    id="taskTitle"
                    name="taskTitle"
@@ -14,7 +18,9 @@
         </div>
         <div id="taskContent">
             <label for="taskContent">Content</label> <br>
+
             <textarea [(ngModel)]="modifiedTask.content" 
+
                       name="taskContent" 
                       id="taskContent" 
                       cols="30" rows="10">
@@ -22,7 +28,9 @@
         </div>
         <div class="priorityDiv">
             <label>Priority</label><br>
+
             <input [(ngModel)]="modifiedTask.priority"
+
                    type="radio"
                    id="high"
                    name="taskPriority"
@@ -30,7 +38,9 @@
                    >
             <label for="high">High</label>
 
+
             <input [(ngModel)]="modifiedTask.priority"
+
                    type="radio"
                    id="medium"
                    name="taskPriority"    
@@ -38,7 +48,9 @@
                    >
             <label for="medium">Medium</label>
 
+
             <input [(ngModel)]="modifiedTask.priority"
+
                    type="radio"
                    id="low"
                    name="taskPriority"      
@@ -49,8 +61,10 @@
 
         <div id="actions">
             <button (click)="returnToTaskView()">Cancel</button>
+
             <button (click)="modifyTaskForm.reset()">Clear</button>
             <button (click)="modifyTask(); returnToTaskView();">Submit</button>
+
         </div>
         
 
