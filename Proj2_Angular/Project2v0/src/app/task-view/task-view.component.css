@@ -81,18 +81,33 @@
     /* gap: 1.5rem; */
     
     grid-auto-columns: 1fr;
-    /* grid-template-areas:
+    grid-template-areas:
      'one'
      'two'
      'three'
      'four'
      'five'
-   
-     'six'
-     'seven'
-     'eight'
-     'nine'
-     'ten'; */
+     'a6'
+     'a7'
+     'a8'
+     'a9'
+     'a10'
+     'a11'
+     'a12'
+     'a13'
+     'a14'
+     'a15'
+     'a16'
+     'a17'
+     'a18'
+     'a19'
+     'a20'
+     'a21'
+     'a22'
+     'a23'
+     'a24'
+     'a25'
+    ;
   /*  */
     padding-block: 2rem;
     width: min(95%, 70rem);
@@ -229,13 +244,17 @@
     }
   } */
   
-  /* @media screen and (min-width: 38em) {
+  @media screen and (min-width: 38em) {
     .task-grid {
       grid-template-areas:
        'one one'
        'two five'
        'three five'
-       'four four';
+       'four four'
+       'a6 a6'
+       'a10 a7'
+       'a10 a8'
+       'a9 a9';
       
     }
   }
@@ -245,10 +264,13 @@
         grid-template-areas:
         "one one two"
         "five five five"
-        "three four four";
+        "three four four"
+        "a7 a6 a6"
+        "a8 a8 a8"
+        "a10 a10 a9";
         
     }
-  } */
+  }
   
   @media screen and (min-width: 75em) {
     .task-grid {
