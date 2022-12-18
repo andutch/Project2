@@ -24,7 +24,7 @@ export class CreateTaskComponent {
 
   constructor(private router: Router, private taskDataXfer: TaskDataXferService){}
 
-  @Output() newTaskEvent = new EventEmitter<any>();
+  @Output() newTaskEvent = new EventEmitter<any>();//mod
 
   currentDate = new Date();
   timestamp = "Last Sync: " + (this.currentDate.getMonth()+1) + "/"
@@ -34,7 +34,7 @@ export class CreateTaskComponent {
   + this.currentDate.getMinutes();
 
 
-  newTask: Task = new Task ('', '', 0, this.timestamp);
+  newTask: Task = new Task ('', '', '', 0, this.timestamp);
 
 
   

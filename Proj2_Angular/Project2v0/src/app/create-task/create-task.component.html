@@ -12,6 +12,15 @@
                    placeholder="Enter Task Title..."
                    >
         </div>
+        <div>
+            <label for="dueDate">Due Date</label><br>
+            <input [(ngModel)]="newTask.dueDate"
+                   type="text"
+                   id="dueDate"
+                   name="dueDate"
+                   placeholder="Enter due date..."
+                   >
+        </div>
         <div id="taskContent">
             <label for="taskContent">Content</label> <br>
             <textarea [(ngModel)]="newTask.content" name="taskContent" id="taskContent" cols="30" rows="10"></textarea>

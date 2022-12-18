@@ -47,6 +47,8 @@
   /* components */
   .task-grid {
     display: grid;
+    
+    /* grid-template-columns: auto; */
     /*  */
     /* gap: 1.5rem; */
     
@@ -153,7 +155,7 @@
 }
 
   
-  @media screen and (min-width: 38em) {
+  @media screen and (min-width: 40em) {
     .task-grid {
       grid-template-areas:
        'one one'

@@ -20,7 +20,7 @@ export class ModifyTasksComponent {
   + this.currentDate.getMinutes();
 
 
-  modifiedTask: Task = new Task ('', '', 0, this.timestamp);
+  modifiedTask: Task = new Task ('', '', '', 0, this.timestamp);
   
 
   modifyTask():void {
