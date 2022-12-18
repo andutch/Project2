@@ -15,15 +15,6 @@ export class TaskViewComponent {
   };
 
 
-
-  // populateExampleTasks():void {
-  //   for (let task in TASKS)
-  //     {this.taskDataXfer.taskList.push(TASKS[task]);
-  //     console.log(this.taskDataXfer.taskList)
-  //       }
-
-
-
   taskList = this.taskDataXfer.taskList;
 
 
@@ -37,7 +28,7 @@ export class TaskViewComponent {
 
   sortArr(){this.taskDataXfer.sortTasks()}
 
-/////////////////
+
     populateExampleTasks():void {
     for (let task in TASKS)
       {

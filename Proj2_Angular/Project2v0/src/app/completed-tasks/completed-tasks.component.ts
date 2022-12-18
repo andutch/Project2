@@ -15,16 +15,6 @@ export class CompletedTasksComponent {
  
   };
 
-
-
-  // populateExampleTasks():void {
-  //   for (let task in TASKS)
-  //     {this.taskDataXfer.taskList.push(TASKS[task]);
-  //     console.log(this.taskDataXfer.taskList)
-  //       }
-
-
-
   taskList = this.taskDataXfer.completedTaskList;
 
 
