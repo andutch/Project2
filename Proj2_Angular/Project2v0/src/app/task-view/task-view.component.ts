@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TaskDataXferService } from '../services/task-data-xfer.service';
+import { TASKS } from '../models/example-tasks';
 
 @Component({
   selector: 'app-task-view',
@@ -9,7 +10,20 @@ import { TaskDataXferService } from '../services/task-data-xfer.service';
 })
 export class TaskViewComponent {
 
-  constructor(public taskDataXfer: TaskDataXferService, private router: Router){};
+  constructor(public taskDataXfer: TaskDataXferService, private router: Router){
+
+    this.populateExampleTasks()
+  };
+
+
+
+  // populateExampleTasks():void {
+  //   for (let task in TASKS)
+  //     {this.taskDataXfer.taskList.push(TASKS[task]);
+  //     console.log(this.taskDataXfer.taskList)
+  //       }
+
+
 
   taskList = this.taskDataXfer.taskList;
 
@@ -20,5 +34,22 @@ export class TaskViewComponent {
     this.taskDataXfer.search();
     this.router.navigateByUrl('/modify-tasks');
   }
+
+
+  sortArr(){this.taskDataXfer.sortTasks()}
+
+/////////////////
+    populateExampleTasks():void {
+    for (let task in TASKS)
+      {
+        // this.taskDataXfer.taskList.sort((a:any, b:any) => a.dueDate - b.dueDate).push(TASKS[task]);
+        this.taskDataXfer.taskList.push(TASKS[task]);
+
+      console.log(this.taskDataXfer.taskList)
+
+      this.taskDataXfer.sortTasks();
+        }}
+       
+  
 
 }

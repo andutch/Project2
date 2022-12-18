@@ -8,7 +8,7 @@
 
       <div class="flex">
         <div>
-          <img  src="../../assets/images/fire.png" alt="Fire">
+         <img  src="../../assets/images/fire.png" alt="Fire">
         </div>
         <div>
           <h2 class="name">Due: 04-Dec-22</h2>
@@ -106,13 +106,13 @@
     </article>
 
 
-
+<button (click)="sortArr()">test but</button>
 
     <ng-container *ngFor="let task of taskList; index as i">
-      <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+6}}; grid-area: var(--grid-var);">
+      <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+6}}; grid-area: var(--grid-var);" (click)='modifyTask(task.taskId)'>
       <!-- <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:{{i}}; grid-area: --grid-var"> -->
       <!-- <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:toWord(i+5); grid-area: var(--grid-var)"> -->
-        <div class="flex" (click)='modifyTask(task.taskId)'>
+        <div class="flex" >
           <div>
             <ng-container [ngSwitch]='task.priority' >
                 
@@ -125,7 +125,8 @@
 
           </div>
           <div>
-            <h2 class="name">{{ task.timestamp }}</h2>
+            <h2 class="name">Due: {{task.dueDate}}</h2>
+            <p class="position"><progress value="80" max="100"></progress></p>
             <!-- <button (click)='modifyTask(task.taskId)'>Edit</button> -->
           </div>
         </div>

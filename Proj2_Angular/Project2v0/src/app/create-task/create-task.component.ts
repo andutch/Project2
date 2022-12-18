@@ -24,7 +24,7 @@ export class CreateTaskComponent {
 
   constructor(private router: Router, private taskDataXfer: TaskDataXferService){}
 
-  @Output() newTaskEvent = new EventEmitter<any>();//mod
+  // @Output() newTaskEvent = new EventEmitter<any>();//mod
 
   currentDate = new Date();
   timestamp = "Last Sync: " + (this.currentDate.getMonth()+1) + "/"
@@ -41,6 +41,11 @@ export class CreateTaskComponent {
 
   createNewTask():void {
     this.taskDataXfer.taskList.push(this.newTask);
+    this.taskDataXfer.sortTasks();
+
+    /////////////////////
+    // this.taskDataXfer.taskList.sort((a:any, b:any) => a.dueDate - b.dueDate);
+
     console.log(this.taskDataXfer.taskList)
   }
 
@@ -49,6 +54,7 @@ export class CreateTaskComponent {
       {this.taskDataXfer.taskList.push(TASKS[task]);
       console.log(this.taskDataXfer.taskList)
         }
+        this.taskDataXfer.sortTasks();
   }
 
 

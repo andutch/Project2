@@ -26,5 +26,11 @@ export class Task {
             this.timestamp = timestamp;
             this.taskId;
         }
+        
+
+        // funct():Date{return (new Date(this.Task.dueDate))}
 
 }
+
+
+

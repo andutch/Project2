@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Task } from '../models/task';
 
@@ -8,7 +9,7 @@ import { Task } from '../models/task';
 })
 export class TaskDataXferService {
 
-  constructor() { }
+  constructor() {}
 
   public taskData: any;
 
@@ -52,5 +53,16 @@ export class TaskDataXferService {
     // console.log();
     // console.log(this.taskList);
   }
+
+  // funct():Date{return (new Date(this.taskList.))}
+
+
+sortTasks(){
+
+  this.taskList.sort((a:any, b:any) => a.priority - b.priority);
+  this.taskList.sort((a:any, b:any) => Date.parse(a.dueDate) - Date.parse(b.dueDate));
+ 
+}
+
 
 }
