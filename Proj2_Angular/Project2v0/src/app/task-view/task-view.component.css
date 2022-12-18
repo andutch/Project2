@@ -55,11 +55,11 @@
     grid-auto-columns: 1fr;
   
     grid-template-areas:
-     'one'
-     'two'
-     'three'
-     'four'
-     'five'
+     'a1'
+     'a2'
+     'a3'
+     'a4'
+     'a5'
      'a6'
      'a7'
      'a8'
@@ -159,10 +159,10 @@
   @media screen and (min-width: 40em) {
     .task-grid {
       grid-template-areas:
-       'one one'
-       'two five'
-       'three five'
-       'four four'
+       'a1 a1'
+       'a2 a5'
+       'a3 a5'
+       'a4 a4'
        'a6 a6'
        'a10 a7'
        'a10 a8'
@@ -174,9 +174,9 @@
   @media screen and (min-width: 54em) {
     .task-grid {
         grid-template-areas:
-        "one one two"
-        "five five five"
-        "three four four"
+        "a1 a1 a2"
+        "a5 a5 a5"
+        "a3 a4 a4"
         "a7 a6 a6"
         "a8 a8 a8"
         "a10 a10 a9";
@@ -187,8 +187,8 @@
   @media screen and (min-width: 75em) {
     .task-grid {
         grid-template-areas:
-        "one one two five"
-        "three four four five"
+        "a1 a2 a2 a5"
+        "a3 a4 a4 a5"
        
         "a6 a7 a8 a8"
         "a6 a9 a9 a10"
