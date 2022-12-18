@@ -43,37 +43,7 @@
     gap: var(--gap, 1rem);
   }
   
-/*   
-  .bg-primary-4 {
-    background: hsl(var(--clr-primary-4));
-    
-  }
-  .bg-secondary-4 {
-    background: hsla(var(--clr-secondary-4));
-  }
-  .bg-secondary-5 {
-    background: hsl(var(--clr-secondary-5));
-  }
-  
-  .bg-neutral-1 {
-    background: hsl(var(--clr-neutral-1));
-  }
-  
-  .text-neutral-1 {
-    color: hsl(var(--clr-neutral-1));
-  }
-  .text-secondary-4 {
-    color: hsl(var(--clr-secondary-4));
-  }
-  .text-secondary-6 {
-    color: hsl(var(--clr-secondary-6));
-  }
 
-
-  .border-primary-400 {
-    border: 2px solid #a775f1;
-  } */
-  
   /* components */
   .task-grid {
     display: grid;
@@ -153,53 +123,6 @@
   
 
 
-/* 
-  .task:nth-child(6) {
-   
-    grid-area: a-6;
-  }
- 
-
-  
-  .task:nth-child(7) {
-    grid-area: a-7;
-  }
-
-  .task:nth-child(8) {
-    grid-area: a-8;
-  }
-
-  .task:nth-child(9) {
-    grid-area: a-9;
-  }
-  .task:nth-child(10) {
-    grid-area: a-10;
-  } */
-
-
-
-  
-  /* .task:nth-child(6) {
-   
-    grid-area: six;
-  }
- 
-
-  
-  .task:nth-child(7) {
-    grid-area: seven;
-  }
-
-  .task:nth-child(8) {
-    grid-area: eight;
-  }
-
-  .task:nth-child(9) {
-    grid-area: nine;
-  }
-  .task:nth-child(10) {
-    grid-area: ten;
-  }  */
 
 /********************************************************/
 
@@ -228,21 +151,7 @@
   color: hsl(var(--clr-secondary-6));
   background: hsl(var(--clr-neutral-1));
 }
-/* 
-.box-type-4{
-  color: hsl(var(--clr-neutral-1));
-  background: hsl(var(--clr-secondary-5));
-} */
 
-  /* @media screen and (min-width: 33em) {
-    .task-grid {
-        grid-template-areas:
-        "one one"
-        "two three"
-        "five five"
-        "four four";
-    }
-  } */
   
   @media screen and (min-width: 38em) {
     .task-grid {
@@ -306,8 +215,7 @@
         "a46 a49 a49 a50"
         ; 
 
-        /* "six-0 seven-1 eight-2 eight-2"
-        "six-0 nine-3 nine-3 ten-4"; */
+
        
     }
   }
