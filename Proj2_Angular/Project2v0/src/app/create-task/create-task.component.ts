@@ -1,5 +1,5 @@
 
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { Task } from '../models/task';
 import { Router } from '@angular/router';
@@ -19,17 +19,7 @@ import { TASKS } from '../models/example-tasks';
 
 
 //////////////////////////
-export class CreateTaskComponent implements OnInit{
-
-  ngOnInit(): void {
-    for (let task in TASKS)
-      {this.taskDataXfer.taskList.push(TASKS[task]);
-      console.log(this.taskDataXfer.taskList)
-        }
-  }
-//////////////
-
-
+export class CreateTaskComponent {
 
 
   constructor(private router: Router, private taskDataXfer: TaskDataXferService){}
@@ -53,6 +43,16 @@ export class CreateTaskComponent implements OnInit{
     this.taskDataXfer.taskList.push(this.newTask);
     console.log(this.taskDataXfer.taskList)
   }
+
+  populateExampleTasks():void {
+    for (let task in TASKS)
+      {this.taskDataXfer.taskList.push(TASKS[task]);
+      console.log(this.taskDataXfer.taskList)
+        }
+  }
+
+
+
 
   returnToTaskView(): void {
     this.router.navigateByUrl('/task-view');
