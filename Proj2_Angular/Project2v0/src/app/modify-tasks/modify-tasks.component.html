@@ -63,8 +63,8 @@
 
         <div id="actions">
             <button (click)="returnToTaskView()">Cancel</button>
-
             <button (click)="modifyTaskForm.reset()">Clear</button>
+            <button (click)="moveToCompleted()">Complete</button>
             <button (click)="modifyTask(); returnToTaskView();">Submit</button>
 
         </div>
@@ -72,7 +72,4 @@
 
     </form>
 
-    <section>
-        <button (click)="taskDataXfer.search()"> test </button>
-    </section>
 </main>

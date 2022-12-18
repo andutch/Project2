@@ -39,4 +39,10 @@ export class ModifyTasksComponent{
   returnToTaskView(): void {
     this.router.navigateByUrl('/task-view');
   }
+
+  moveToCompleted(){
+  //  this.taskDataXfer.moveToCompleted(this.taskDataXfer.taskList.indexOf(this.modifiedTask));
+  this.taskDataXfer.moveToCompleted(this.modifiedTask.taskId);
+
+  }
 }
