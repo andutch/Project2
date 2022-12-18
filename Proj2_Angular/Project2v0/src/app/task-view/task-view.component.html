@@ -112,7 +112,7 @@
       <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+6}}; grid-area: var(--grid-var);">
       <!-- <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:{{i}}; grid-area: --grid-var"> -->
       <!-- <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:toWord(i+5); grid-area: var(--grid-var)"> -->
-        <div class="flex">
+        <div class="flex" (click)='modifyTask(task.taskId)'>
           <div>
             <ng-container [ngSwitch]='task.priority' >
                 

@@ -39,7 +39,7 @@
   
   /* utilities */
   .flex {
-    display: flex;
+    /* display: flex; */
     gap: var(--gap, 1rem);
   }
   
