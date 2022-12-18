@@ -12,7 +12,6 @@ export class TaskViewComponent {
 
   constructor(public taskDataXfer: TaskDataXferService, private router: Router){
 
-    this.populateExampleTasks()
   };
 
 

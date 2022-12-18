@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { TaskDataXferService } from '../services/task-data-xfer.service';
-import { TASKS, COMPLETEDTASKS } from '../models/example-tasks';
+import { COMPLETEDTASKS } from '../models/example-tasks';
 
 @Component({
   selector: 'app-completed-tasks',
@@ -12,7 +12,7 @@ import { TASKS, COMPLETEDTASKS } from '../models/example-tasks';
 export class CompletedTasksComponent {
   constructor(public taskDataXfer: TaskDataXferService, private router: Router){
 
-    this.populateExampleTasks()
+ 
   };
 
 
@@ -43,7 +43,7 @@ export class CompletedTasksComponent {
     for (let task in COMPLETEDTASKS)
       {
         // this.taskDataXfer.taskList.sort((a:any, b:any) => a.dueDate - b.dueDate).push(TASKS[task]);
-        this.taskDataXfer.taskList.push(COMPLETEDTASKS[task]);
+        this.taskDataXfer.completedTaskList.push(COMPLETEDTASKS[task]);
 
       console.log(this.taskDataXfer.taskList)
 

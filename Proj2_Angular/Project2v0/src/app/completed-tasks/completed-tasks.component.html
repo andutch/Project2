@@ -3,7 +3,7 @@
 
 <main class="task-grid">
 
-
+<!-- 
     <article class="task box-type-0">
 
       <div class="flex">
@@ -103,10 +103,10 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus!  </p>
         
        
-    </article>
+    </article> -->
 
 
-<button (click)="sortArr()">test but</button>
+<button (click)="populateExampleTasks()">test but</button>
 
     <ng-container *ngFor="let task of taskList; index as i">
       <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+6}}; grid-area: var(--grid-var);" (click)='modifyTask(task.taskId)'>
