@@ -3,7 +3,7 @@
     <form #modifyTaskForm>
 
 
-        <h2>Edit Task</h2>
+        <h2 id="gh">Edit Task</h2>
 
         <div>
             <label for="taskTitle">{{ taskDataXfer.taskToBeEdited.title }}</label> <br>
@@ -19,12 +19,14 @@
         <div id="taskContent">
             <label for="taskContent">Content</label> <br>
 
-            <textarea [(ngModel)]="modifiedTask.content" 
-
+        <textarea ngDefaultControl  [(ngModel)]="modifiedTask.content" 
+        
+                
                       name="taskContent" 
                       id="taskContent" 
                       cols="30" rows="10">
             </textarea>
+            <!-- {{taskDataXfer.taskToBeEdited.content}} -->
         </div>
         <div class="priorityDiv">
             <label>Priority</label><br>

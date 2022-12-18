@@ -8,9 +8,12 @@ import { TaskDataXferService } from '../services/task-data-xfer.service';
   templateUrl: './modify-tasks.component.html',
   styleUrls: ['./modify-tasks.component.css']
 })
-export class ModifyTasksComponent {
+export class ModifyTasksComponent{
 
-  constructor(private router: Router, public taskDataXfer: TaskDataXferService){}
+  constructor(private router: Router, public taskDataXfer: TaskDataXferService){
+    this.modifiedTask = Object.assign({},this.taskDataXfer.taskToBeEdited)
+  }
+
 
   currentDate = new Date();
   timestamp = "Last Sync: " + (this.currentDate.getMonth()+1) + "/"
@@ -23,8 +26,9 @@ export class ModifyTasksComponent {
   modifiedTask: Task = new Task ('', '', '', 0, this.timestamp);
   
 
+
   modifyTask():void {
-    console.log("inside modifiedTas.component: ");
+    console.log("inside modifiedTask.component: ");
     console.log(this.modifiedTask);
     console.log("inside modifiedTas.component (service variable):");
     console.log(this.taskDataXfer.taskToBeEdited);
