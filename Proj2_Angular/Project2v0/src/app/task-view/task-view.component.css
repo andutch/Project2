@@ -255,9 +255,7 @@
         grid-template-areas:
         "one one two five"
         "three four four five"
-        /* "six seven eight nine"
-        "six seven eight nine" */
-        /* "ten eleven twelve thirteen" */
+       
         "a6 a7 a8 a8"
         "a6 a9 a9 a10"
         
@@ -268,7 +266,23 @@
         "a16 a19 a19 a20"
         
         "a21 a21 a22 a25"
-        "a23 a24 a24 a25"; 
+        "a23 a24 a24 a25"
+        
+        "a26 a27 a28 a28"
+        "a26 a29 a29 a30"
+
+        "a31 a31 a32 a35"
+        "a33 a34 a34 a35"
+
+        "a36 a37 a38 a38"
+        "a36 a39 a39 a40"
+
+        "a41 a41 a42 a45"
+        "a43 a44 a44 a45"
+
+        "a46 a47 a48 a48"
+        "a46 a49 a49 a50"
+        ; 
 
         /* "six-0 seven-1 eight-2 eight-2"
         "six-0 nine-3 nine-3 ten-4"; */
