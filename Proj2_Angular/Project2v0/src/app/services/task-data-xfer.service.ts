@@ -83,4 +83,26 @@ moveToCompleted(id:string){
   this.sortTasks();
 }
 
+
+isCompleted(id:string):boolean{
+  for(let task in this.completedTaskList){
+    if(id===this.completedTaskList[task].taskId){
+      console.log("found it!!")
+      return true;
+    }
+  } return false;
+}
+
+isOnList(id:string):boolean{
+  for(let task in this.taskList){
+    if(id===this.taskList[task].taskId){
+      console.log("found it!!")
+      return true;
+    }
+  }
+   return false;
+}
+
+
+
 }

@@ -46,4 +46,14 @@ export class ModifyTasksComponent{
   this.router.navigateByUrl('/completed-tasks');
 
   }
+
+isCompleted():boolean{
+  return this.taskDataXfer.isCompleted(this.modifiedTask.taskId);
+}
+
+isOnList():boolean{
+  return this.taskDataXfer.isOnList(this.modifiedTask.taskId);
+}
+
+
 }
