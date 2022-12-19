@@ -67,7 +67,7 @@
             <button (click)="modifyTask(); returnToTaskView();">Submit</button>
 
             <ng-container *ngIf="isCompleted()">
-                <button >Un-complete</button>
+                <button (click)="unComplete()" >Un-complete</button>
             </ng-container>
 
             <ng-container *ngIf="isOnList()">

@@ -55,5 +55,9 @@ isOnList():boolean{
   return this.taskDataXfer.isOnList(this.modifiedTask.taskId);
 }
 
+unComplete(){
+  this.taskDataXfer.unComplete(this.modifiedTask.taskId);
+  this.router.navigateByUrl('/task-view');
+}
 
 }
