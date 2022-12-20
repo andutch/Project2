@@ -66,7 +66,7 @@ export const COMPLETEDTASKS:Task[]=[
     priority: 2,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
     currentDate: new Date(),
-    taskId: '4567'
+    taskId: '4572'
     
     },
     {
@@ -76,7 +76,7 @@ export const COMPLETEDTASKS:Task[]=[
     priority: 0,
     timestamp: 'Due: 04-Dec-22',
     currentDate: new Date(),
-    taskId: '4568'
+    taskId: '4573'
     
     },
     {
@@ -86,7 +86,7 @@ export const COMPLETEDTASKS:Task[]=[
     priority: 0,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
     currentDate: new Date(),
-    taskId: '4569'
+    taskId: '4575'
     
     },
     {
@@ -96,7 +96,7 @@ export const COMPLETEDTASKS:Task[]=[
     priority: 2,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
     currentDate: new Date(),
-    taskId: '4570'
+    taskId: '4576'
     
     },
     {
@@ -106,7 +106,7 @@ export const COMPLETEDTASKS:Task[]=[
     priority: 0,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
     currentDate: new Date(),
-    taskId: '4571'
+    taskId: '4577'
     
     }
     

@@ -71,7 +71,7 @@ moveToCompleted(id:string){
   console.log(id)
   for(let task in this.taskList){
     if(id===this.taskList[task].taskId){
-      console.log("found it!!")
+      // console.log("found it!!")
       this.completedTaskList.push(this.taskList[task]);
         this.taskList.splice(task,1);}
   }
@@ -88,7 +88,7 @@ unComplete(id:string){
   console.log(id)
   for(let task in this.completedTaskList){
     if(id===this.completedTaskList[task].taskId){
-      console.log("found it!!")
+      // console.log("found it!!")
       this.taskList.push(this.completedTaskList[task]);
         this.completedTaskList.splice(task,1);}
   }
@@ -100,7 +100,7 @@ unComplete(id:string){
 isCompleted(id:string):boolean{
   for(let task in this.completedTaskList){
     if(id===this.completedTaskList[task].taskId){
-      console.log("found it!!")
+      // console.log("found it!!")
       return true;
     }
   } return false;
@@ -109,7 +109,7 @@ isCompleted(id:string):boolean{
 isOnList(id:string):boolean{
   for(let task in this.taskList){
     if(id===this.taskList[task].taskId){
-      console.log("found it!!")
+      // console.log("found it!!")
       return true;
     }
   }
