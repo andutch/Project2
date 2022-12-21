@@ -45,15 +45,15 @@ div{
 }
 
 label{
-    background-color: rgba(0, 0, 0, 0.144);
+    /* background-color: rgba(0, 0, 0, 0.144); */
     font-weight: bold;
     padding: 6px;
 }
 
-.priorityDiv {
+/* .priorityDiv {
     background-color: rgba(0, 0, 0, 0.144);
     font-weight:0;
-}
+} */
 
 input {
     margin: 6px 0px;
