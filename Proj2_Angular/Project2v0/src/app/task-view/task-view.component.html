@@ -106,7 +106,7 @@
     </article> -->
 
 
-<button (click)="populateExampleTasks()">test button</button>
+
 
     <ng-container *ngFor="let task of taskList; index as i">
       <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+1}}; grid-area: var(--grid-var);" (click)='modifyTask(task.taskId)'>
@@ -142,6 +142,6 @@
     </ng-container>
 
   </main>
-
+  <button (click)="populateExampleTasks()">test button</button>
   
 
