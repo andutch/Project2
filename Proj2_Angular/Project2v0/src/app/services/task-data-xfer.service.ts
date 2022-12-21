@@ -126,6 +126,31 @@ isOnList(id:string):boolean{
    return false;
 }
 
+deleteFromComplete(id:string){
+  console.log(id)
+  for(let task in this.completedTaskList){
+    if(id===this.completedTaskList[task].taskId){
+      // console.log("found it!!")
+        this.completedTaskList.splice(task,1);}
+  }
 
+  this.sortTasks();
+}
+
+
+deleteFromTasks(id:string){
+  console.log(id)
+  for(let task in this.taskList){
+    if(id===this.taskList[task].taskId){
+      // console.log("found it!!")
+        this.taskList.splice(task,1);}
+  }
+
+  // console.log(this.taskList.indexOf(task));
+  // // this.completedTaskList.push(this.taskList(this.taskList.indexOf(task)));
+  // // this.taskList.splice(this.taskList.indexOf(task),1);
+  // this.taskList.indexOf(task);
+  this.sortTasks();
+}
 
 }

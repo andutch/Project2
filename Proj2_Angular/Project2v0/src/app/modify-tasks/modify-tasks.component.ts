@@ -60,4 +60,14 @@ unComplete(){
   this.router.navigateByUrl('/task-view');
 }
 
+deleteTask(){
+  this.taskDataXfer.deleteFromTasks(this.modifiedTask.taskId);
+  this.router.navigateByUrl('/task-view');
+}
+
+deleteCompletedTask(){
+  this.taskDataXfer.deleteFromComplete(this.modifiedTask.taskId);
+  this.router.navigateByUrl('/completed-tasks');
+}
+
 }

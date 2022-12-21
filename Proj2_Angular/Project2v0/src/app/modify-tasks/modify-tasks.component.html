@@ -74,6 +74,14 @@
                 <button (click)="moveToCompleted()">Complete</button>
             </ng-container>
 
+                  <ng-container *ngIf="isCompleted()">
+                <button (click)="deleteCompletedTask()">Delete</button>
+            </ng-container>
+
+            <ng-container *ngIf="isOnList()">
+                <button (click)="deleteTask()">Delete</button>
+            </ng-container>
+
         </div>
         
 

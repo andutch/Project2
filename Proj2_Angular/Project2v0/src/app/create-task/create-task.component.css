@@ -24,11 +24,11 @@ main {
   
     --ff-primary: "Barlow Semi Condensed", sans-serif;
   
-    --fw-4: 500;
-    --fw-7: 600;
+    --fw-4: 600;
+    --fw-7: 700;
   
-    --fs-3: 0.6875rem;
-    --fs-4: 0.8125rem;
+    --fs-3: 0.75rem;
+    --fs-4: 0.85rem;
     --fs-5: 1.25rem;
       
     --grid-var:0
