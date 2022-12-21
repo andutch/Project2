@@ -83,7 +83,7 @@ textarea {
     /* background-color: #f8f8f8; */
     color: hsl(var(--clr-secondary-6));
     background: hsl(var(--clr-neutral-1));
-    border-radius: 15px;
+    border-radius: 5px;
     border: 0px;
 }
 

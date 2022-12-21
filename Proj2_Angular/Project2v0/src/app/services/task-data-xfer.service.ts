@@ -34,6 +34,16 @@ export class TaskDataXferService {
     }
   }
 
+  searchCompleted(): void {
+    for (let i = 0; i < this.completedTaskList.length; i++) {
+      if (this.completedTaskList[i].taskId === this.searchId) {
+      this.taskToBeEdited = this.completedTaskList[i];
+
+      this.taskToBeEditedIndex = i;
+      }
+    }
+  }
+
   modifyTask(modifiedTask: Task) {
     console.log("inside the service (tasktobeedited): ");
     console.log(this.taskToBeEdited);

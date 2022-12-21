@@ -75,7 +75,7 @@ textarea {
     /* box-shadow: 6px 6px 6px rgba(114, 0, 114, 0.795); */
     color: hsl(var(--clr-secondary-6));
     background: hsl(var(--clr-neutral-1));
-    border-radius: 15px;
+    border-radius: 5px;
     border: 0px;
     
 }
