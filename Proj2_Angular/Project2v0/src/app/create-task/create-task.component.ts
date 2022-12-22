@@ -58,6 +58,14 @@ export class CreateTaskComponent {
     this.router.navigateByUrl('/task-view');
   }
 
+  sendToCompleted(){
+    this.taskDataXfer.completedTaskList.push(this.newTask);
+    // this.taskDataXfer.moveToCompleted(this.modifiedTask.taskId);
+    this.taskDataXfer.sortTasks();
+    this.router.navigateByUrl('/completed-tasks');
+
+  }
+
 }
 
 
