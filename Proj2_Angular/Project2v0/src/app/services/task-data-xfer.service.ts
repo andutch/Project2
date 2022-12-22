@@ -45,20 +45,12 @@ export class TaskDataXferService {
   }
 
   modifyTask(modifiedTask: Task) {
-    console.log("inside the service (tasktobeedited): ");
-    console.log(this.taskToBeEdited);
-    console.log("inside the service (modifiedTask): ");
-    console.log(modifiedTask);
     if (modifiedTask.title != '' &&  modifiedTask.title !== this.taskToBeEdited.title)
       this.taskToBeEdited.title = modifiedTask.title;
     if (modifiedTask.content != '' && modifiedTask.content !== this.taskToBeEdited.content)
       this.taskToBeEdited.content = modifiedTask.content;
     this.taskToBeEdited.priority = modifiedTask.priority;
-    this.taskToBeEdited.timestamp = modifiedTask.timestamp;
-    console.log("inside the service afer if statements(tasktobeedited): ");
-    console.log(this.taskToBeEdited)
-    console.log(this.taskList);
- 
+    this.taskToBeEdited.timestamp = modifiedTask.timestamp; 
   }
 
   // funct():Date{return (new Date(this.taskList.))}
@@ -75,26 +67,21 @@ sortTasks(){
 
 
 moveToCompleted(id:string){
-  console.log(id)
   for(let task in this.taskList){
-    if(id===this.taskList[task].taskId){
-      // console.log("found it!!")
+    if(id===this.taskList[task].taskId) {
       this.completedTaskList.push(this.taskList[task]);
-        this.taskList.splice(task,1);}
+      this.taskList.splice(task,1);}
   }
-
 
   this.sortTasks();
 }
 
 
 unComplete(id:string){
-  console.log(id)
   for(let task in this.completedTaskList){
     if(id===this.completedTaskList[task].taskId){
-      // console.log("found it!!")
       this.taskList.push(this.completedTaskList[task]);
-        this.completedTaskList.splice(task,1);}
+      this.completedTaskList.splice(task,1);}
   }
 
   this.sortTasks();
@@ -104,16 +91,16 @@ unComplete(id:string){
 isCompleted(id:string):boolean{
   for(let task in this.completedTaskList){
     if(id===this.completedTaskList[task].taskId){
-      // console.log("found it!!")
       return true;
     }
-  } return false;
+  } 
+  
+  return false;
 }
 
 isOnList(id:string):boolean{
   for(let task in this.taskList){
     if(id===this.taskList[task].taskId){
-      // console.log("found it!!")
       return true;
     }
   }
@@ -121,10 +108,8 @@ isOnList(id:string):boolean{
 }
 
 deleteFromComplete(id:string){
-  console.log(id)
   for(let task in this.completedTaskList){
     if(id===this.completedTaskList[task].taskId){
-      // console.log("found it!!")
         this.completedTaskList.splice(task,1);}
   }
 
@@ -133,13 +118,10 @@ deleteFromComplete(id:string){
 
 
 deleteFromTasks(id:string){
-  console.log(id)
   for(let task in this.taskList){
     if(id===this.taskList[task].taskId){
-      // console.log("found it!!")
         this.taskList.splice(task,1);}
   }
-
 
   this.sortTasks();
 }

@@ -28,10 +28,6 @@ export class ModifyTasksComponent{
 
 
   modifyTask():void {
-    console.log("inside modifiedTask.component: ");
-    console.log(this.modifiedTask);
-    console.log("inside modifiedTas.component (service variable):");
-    console.log(this.taskDataXfer.taskToBeEdited);
     this.taskDataXfer.modifyTask(this.modifiedTask);
 
   }
