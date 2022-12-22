@@ -41,16 +41,14 @@ export class CreateTaskComponent {
   createNewTask():void {
     this.taskDataXfer.taskList.push(this.newTask);
     this.taskDataXfer.sortTasks();
-
-    console.log(this.taskDataXfer.taskList)
   }
 
   populateExampleTasks():void {
-    for (let task in TASKS)
-      {this.taskDataXfer.taskList.push(TASKS[task]);
-      console.log(this.taskDataXfer.taskList)
-        }
-        this.taskDataXfer.sortTasks();
+    for (let task in TASKS) {
+      this.taskDataXfer.taskList.push(TASKS[task]);
+    }
+    
+    this.taskDataXfer.sortTasks();
   }
 
 

@@ -19,7 +19,6 @@ export class CompletedTasksComponent {
 
 
   modifyCompletedTask(taskId: string): void {
-    console.log("passed variable: " + taskId);
     this.taskDataXfer.searchId = taskId;
     this.taskDataXfer.searchCompleted();
     this.router.navigateByUrl('/modify-tasks');
