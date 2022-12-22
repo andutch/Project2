@@ -64,6 +64,8 @@
         <div id="actions">
             <button (click)="returnToTaskView()">Cancel</button>
             <button (click)="modifyTaskForm.reset()">Clear</button>
+
+            
             <button (click)="modifyTask(); returnToTaskView();">Submit</button>
 
             <ng-container *ngIf="isCompleted()">

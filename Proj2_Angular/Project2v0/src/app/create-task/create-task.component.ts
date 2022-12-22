@@ -1,5 +1,5 @@
 
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component} from '@angular/core';
 
 import { Task } from '../models/task';
 import { Router } from '@angular/router';
@@ -55,6 +55,7 @@ export class CreateTaskComponent {
 
 
   returnToTaskView(): void {
+    
     this.router.navigateByUrl('/task-view');
   }
 

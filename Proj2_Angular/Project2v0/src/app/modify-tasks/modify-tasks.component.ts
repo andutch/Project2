@@ -33,7 +33,13 @@ export class ModifyTasksComponent{
   }
 
   returnToTaskView(): void {
-    this.router.navigateByUrl('/task-view');
+
+    if (this.isCompleted())
+    {
+      console.log('on completed')
+      this.router.navigateByUrl('/completed-tasks');}
+
+    else this.router.navigateByUrl('/task-view');
   }
 
   moveToCompleted(){

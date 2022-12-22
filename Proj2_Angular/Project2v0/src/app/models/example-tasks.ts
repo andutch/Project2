@@ -27,7 +27,7 @@ taskId: '4568'
 title: 'Study for java cert',
 dueDate: '2022-12-08',
 content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”',
-priority: 0,
+priority: 1,
 timestamp: 'Due: 04-Dec-2204-Dec-22',
 currentDate: new Date(),
 taskId: '4569'
@@ -93,7 +93,7 @@ export const COMPLETEDTASKS:Task[]=[
     title: 'Go for a bike ride.',
     dueDate: '2022-11-27',
     content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”',
-    priority: 2,
+    priority: 1,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
     currentDate: new Date(),
     taskId: '4576'
