@@ -28,7 +28,7 @@ export class CompletedTasksComponent {
 
   sortArr(){this.taskDataXfer.sortTasks()}
 
-/////////////////
+
     populateExampleTasks():void {
     for (let task in COMPLETEDTASKS)
       {

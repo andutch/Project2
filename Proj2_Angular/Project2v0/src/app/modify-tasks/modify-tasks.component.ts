@@ -41,7 +41,7 @@ export class ModifyTasksComponent{
   }
 
   moveToCompleted(){
-  //  this.taskDataXfer.moveToCompleted(this.taskDataXfer.taskList.indexOf(this.modifiedTask));
+
   this.taskDataXfer.moveToCompleted(this.modifiedTask.taskId);
   this.router.navigateByUrl('/completed-tasks');
 

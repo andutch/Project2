@@ -18,13 +18,12 @@ import { TASKS } from '../models/example-tasks';
 
 
 
-//////////////////////////
 export class CreateTaskComponent {
 
 
   constructor(private router: Router, private taskDataXfer: TaskDataXferService){}
 
-  // @Output() newTaskEvent = new EventEmitter<any>();//mod
+  
 
   currentDate = new Date();
   timestamp = "Last Sync: " + (this.currentDate.getMonth()+1) + "/"
@@ -42,9 +41,6 @@ export class CreateTaskComponent {
   createNewTask():void {
     this.taskDataXfer.taskList.push(this.newTask);
     this.taskDataXfer.sortTasks();
-
-    /////////////////////
-    // this.taskDataXfer.taskList.sort((a:any, b:any) => a.dueDate - b.dueDate);
 
     console.log(this.taskDataXfer.taskList)
   }
@@ -67,31 +63,4 @@ export class CreateTaskComponent {
 }
 
 
-// export class CreateTaskComponent {
-
-//   constructor(private router: Router, private taskDataXfer: TaskDataXferService){}
-
-//   @Output() newTaskEvent = new EventEmitter<any>();
-
-//   currentDate = new Date();
-//   timestamp = "Last Sync: " + (this.currentDate.getMonth()+1) + "/"
-//   + this.currentDate.getDate() + "/" 
-//   + this.currentDate.getFullYear() + " @ "  
-//   + this.currentDate.getHours() + ":"  
-//   + this.currentDate.getMinutes();
-
-//   newTask: Task = new Task ('', '', 0, this.timestamp);//mod
-
-  
-
-//   createNewTask():void {
-//     this.taskDataXfer.taskList.push(this.newTask);
-//     console.log(this.taskDataXfer.taskList)
-//   }
-
-//   returnToTaskView(): void {
-//     this.router.navigateByUrl('/task-view');
-//   }
-
-// }
 

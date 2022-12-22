@@ -28,7 +28,7 @@ export class Task {
         }
         
 
-        // funct():Date{return (new Date(this.Task.dueDate))}
+      
 
 }
 

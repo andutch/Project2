@@ -58,10 +58,7 @@ export class TaskDataXferService {
     console.log("inside the service afer if statements(tasktobeedited): ");
     console.log(this.taskToBeEdited)
     console.log(this.taskList);
-    // this.taskList.splice(this.taskToBeEditedIndex, 1);
-    // this.taskList.push(this.taskToBeEdited);    
-    // console.log();
-    // console.log(this.taskList);
+ 
   }
 
   // funct():Date{return (new Date(this.taskList.))}
@@ -86,10 +83,7 @@ moveToCompleted(id:string){
         this.taskList.splice(task,1);}
   }
 
-  // console.log(this.taskList.indexOf(task));
-  // // this.completedTaskList.push(this.taskList(this.taskList.indexOf(task)));
-  // // this.taskList.splice(this.taskList.indexOf(task),1);
-  // this.taskList.indexOf(task);
+
   this.sortTasks();
 }
 
@@ -146,10 +140,7 @@ deleteFromTasks(id:string){
         this.taskList.splice(task,1);}
   }
 
-  // console.log(this.taskList.indexOf(task));
-  // // this.completedTaskList.push(this.taskList(this.taskList.indexOf(task)));
-  // // this.taskList.splice(this.taskList.indexOf(task),1);
-  // this.taskList.indexOf(task);
+
   this.sortTasks();
 }
 
