@@ -106,7 +106,7 @@
     </article> -->
 
 
-<button (click)="populateExampleTasks()">test but</button>
+<button ng-container *ngIf="taskList.length<5" (click)="populateExampleTasks()">Populate Example</button>
 
     <ng-container *ngFor="let task of taskList; index as i">
       <article class="task box-type-{{i%5}}" style="margin:.5rem; --grid-var:a{{i+1}}; grid-area: var(--grid-var);" (click)='modifyCompletedTask(task.taskId)'>

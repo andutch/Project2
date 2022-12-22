@@ -61,7 +61,7 @@ export const COMPLETEDTASKS:Task[]=[
 
     {
     title: 'Finish Project 2',
-    dueDate: '2022-12-04',
+    dueDate: '2022-12-05',
     content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”',
     priority: 2,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
@@ -71,7 +71,7 @@ export const COMPLETEDTASKS:Task[]=[
     },
     {
     title: ' Hit the gym work out. New years resolution.',
-    dueDate: '2022-12-06',
+    dueDate: '2022-12-11',
     content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus!   ”',
     priority: 0,
     timestamp: 'Due: 04-Dec-22',
@@ -81,7 +81,7 @@ export const COMPLETEDTASKS:Task[]=[
     },
     {
     title: 'Study for java cert',
-    dueDate: '2022-12-08',
+    dueDate: '2022-12-21',
     content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”',
     priority: 0,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
@@ -91,7 +91,7 @@ export const COMPLETEDTASKS:Task[]=[
     },
     {
     title: 'Take a dog out for a walk. Go to the park.',
-    dueDate: '2022-12-07',
+    dueDate: '2022-12-27',
     content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”',
     priority: 2,
     timestamp: 'Due: 04-Dec-2204-Dec-22',
@@ -101,7 +101,7 @@ export const COMPLETEDTASKS:Task[]=[
     },
     {
     title: 'Shopping list for groceries and other stuff',
-    dueDate: '2022-12-01',
+    dueDate: '2022-12-30',
     content:' “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic repellat repellendus! Quos voluptatum neque atque, dolor, facilis cupiditate adipisci fugiat praesentium hic molestiae dicta odio nemo. Ducimus, voluptates sed!  ”',
     priority: 0,
     timestamp: 'Due: 04-Dec-2204-Dec-22',

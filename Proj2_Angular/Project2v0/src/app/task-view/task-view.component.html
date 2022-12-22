@@ -121,6 +121,9 @@
               <img *ngSwitchCase = "'2'" src="../../assets/images/cold.png">
               <!-- <img *ngSwitchDefault>Need a default img -{{task.priority}} -->
               <!-- <img src='{{task.priority}}'  alt="priority"> -->
+              <!-- <ng-container *ngIf="isPastDue(task.dueDate)">
+                <div>Past Due!!!</div>
+            </ng-container> -->
           </ng-container>
 
 
@@ -142,6 +145,7 @@
     </ng-container>
 
   </main>
-  <button (click)="populateExampleTasks()">test button</button>
-  
+  <ng-container *ngIf="taskList.length<5">
+  <button (click)="populateExampleTasks()">Poupulate Examples</button>
+    </ng-container>
 

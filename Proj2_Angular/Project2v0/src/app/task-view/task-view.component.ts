@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TaskDataXferService } from '../services/task-data-xfer.service';
 import { TASKS } from '../models/example-tasks';
+import { Task } from '../models/task';
 
 @Component({
   selector: 'app-task-view',
@@ -40,6 +41,14 @@ export class TaskViewComponent {
       this.taskDataXfer.sortTasks();
         }}
        
-  
+  isPastDue(task:Task):boolean{
+    let currentDate = new Date();
+    
+   if (Date.parse(task.dueDate) < currentDate.getDate()) {
+    return true;
+   }
+
+  return false;
+  }
 
 }
