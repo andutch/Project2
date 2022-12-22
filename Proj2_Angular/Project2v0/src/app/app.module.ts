@@ -12,6 +12,7 @@ import { ModifyTasksComponent } from './modify-tasks/modify-tasks.component';
 import { CompletedTasksComponent } from './completed-tasks/completed-tasks.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CreateTaskComponent } from './create-task/create-task.component';
     CompletedTasksComponent,
     CalendarComponent,
     CreateTaskComponent,
+    AboutUsComponent,
   ],
 
    ///add forms module here 
