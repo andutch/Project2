@@ -33,14 +33,17 @@
     
       h1,
       h2,
-      h3 {
+      h3,
+      p {
         font-weight: var(--fw-7);
+        pointer-events: none;
       }
       
       /* utilities */
       .flex {
         /* display: flex; */
         gap: var(--gap, 1rem);
+        pointer-events: none;
       }
       
     
@@ -96,9 +99,10 @@
         padding: 1.5rem;
         border-radius: 0.5rem;
         box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-4) / 0.25);
+        
       }
     
-      
+/*       
       .task:nth-child(1) {
         margin: .5rem;
         grid-area: one;
@@ -123,7 +127,7 @@
         margin: .5rem;
         grid-area: five;
       }
-      
+       */
     
     
     
@@ -162,6 +166,7 @@
         width: 3rem;
         aspect-ratio: 1;
         border-radius: 50%;
+        pointer-events: none;
       }
       
       .task .name {
@@ -179,5 +184,7 @@
         font-size: var(--fs-5);
         line-height: 1.2;
       }
+
+
       
     
