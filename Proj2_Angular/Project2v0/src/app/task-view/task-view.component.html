@@ -20,9 +20,9 @@
           <div>
             <ng-container [ngSwitch]='task.priority' >
                 
-              <img *ngSwitchCase = "'0'" src="../../assets/images/fire.png">
-              <img *ngSwitchCase = "'1'" src="../../assets/images/thermomenter.png">
-              <img *ngSwitchCase = "'2'" src="../../assets/images/cold.png">
+              <img *ngSwitchCase = "'0'" src="../../assets/images/fire.png" alt="fire priority">
+              <img *ngSwitchCase = "'1'" src="../../assets/images/thermomenter.png" alt="medium priority">
+              <img *ngSwitchCase = "'2'" src="../../assets/images/cold.png" alt="low priority">
               <!-- <img *ngSwitchDefault>Need a default img -{{task.priority}} -->
               <!-- <img src='{{task.priority}}'  alt="priority"> -->
               <!-- <ng-container *ngIf="isPastDue(task.dueDate)">
@@ -49,7 +49,7 @@
     </ng-container>
 
   </main>
-  <ng-container *ngIf="taskList.length<5">
+  <ng-container *ngIf="taskList.length<3">
   <button (click)="populateExampleTasks()">Poupulate Examples</button>
     </ng-container>
 
